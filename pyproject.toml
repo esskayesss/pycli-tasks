@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "pycli-tasks"
+version = "0.1.0"
+description = "learning rich and typer by building a cli tasks application"
+authors = ["esskayesss <ess@esskayesss.dev>"]
+license = "GPL"
+readme = "README.md"
+package-mode = false
+
+
+[tool.pyright]
+venvPath = "/Users/esskayesss/Library/Caches/pypoetry/virtualenvs/pycli-tasks-2vpwZ0qj-py3.12"
+
+
+[tool.poetry.dependencies]
+python = "^3.9"
+rich = "^13.7.1"
+typer = { extras = ["all"], version = "^0.12.3" }
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
