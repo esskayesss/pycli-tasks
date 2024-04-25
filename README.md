@@ -3,6 +3,23 @@
 This is a simple CLI Task/Todolist manager written in Python. I made this to primarily familiarize myself with 
 the Typer and Rich Python libraries. 
 
+### Getting Started
+To get a local copy up and running follow these simple steps.
+1. Make sure you have Python and Poetry installed and added to PATH
+2. Clone the repository
+```sh
+git clone https://github.com/esskayesss/pycli-tasks.git
+```
+3. Get the project dependencies
+```sh
+poetry install
+```
+4. Run the program as a module
+```sh
+poetry run python -m src.main
+```
+
+
 ### Deliverables
 - [x] Tasks Creation
 - [x] Tasks Deletion
