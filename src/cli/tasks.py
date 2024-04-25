@@ -41,6 +41,7 @@ def list_todos(a: bool = False):
 def complete_todo():
     tasks = tasks_conn.list_tasks()
     tasks.sort(key=lambda x: x.priority, reverse=True)
+    tasks = [task for task in tasks if task.status.value == 0]
     tasks_table(tasks)
     task_id = int(Prompt.ask("Enter the task id to complete"))
     task = tasks[task_id]
