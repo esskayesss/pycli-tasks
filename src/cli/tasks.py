@@ -7,7 +7,9 @@ from src.models.tasks import Task
 from src.utils.console import console
 from src.cli.categories import table_categories
 
-app = typer.Typer()
+app = typer.Typer(
+    no_args_is_help=True
+)
 
 
 @app.command(name="add")
@@ -16,8 +18,10 @@ def add_todo():
     description = Prompt.ask("Describe the task")
     priority = Prompt.ask("Priority of the task")
     categories = categories_conn.list_categories()
-    table_categories(categories)
-    category = int(Prompt.ask("Category of the task"))
+    category = 0
+    if len(categories) > 1:
+        table_categories(categories)
+        category = int(Prompt.ask("Category of the task"))
     category = categories[category]
     new_task = Task(title, description, priority, category_id=category.ID)
     tasks_conn.add_task(new_task)

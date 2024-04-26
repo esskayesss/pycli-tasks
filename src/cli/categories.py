@@ -7,7 +7,9 @@ from src.db import categories as categories_conn
 from src.models.category import Category
 from src.utils.console import console, error_console
 
-app = typer.Typer()
+app = typer.Typer(
+    no_args_is_help=True
+)
 
 
 @app.command(name="add")
