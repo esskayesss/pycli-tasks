@@ -29,7 +29,9 @@ poetry run python -m src.main
 - [x] Prioritizing Tasks
 - [ ] Filtering Tasks
 - [ ] Searching Tasks
+- [ ] Adding Application State to Optimize DB Calls
 - [x] Adding and Deleting Categories
 - [ ] Adding Fuzzy Finder Menus for Operations [ I miss GoLang so damn much :( ] 
 - [ ] Supporting a full-blown TUI
+- [ ] Remove the default interactive mode for the CLI
 - [ ] Bringing it to the web
